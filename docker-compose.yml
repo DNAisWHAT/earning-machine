@@ -18,7 +18,7 @@ services:
     honeygain:
         container_name: honeygain
         image: honeygain/honeygain
-        command: -tou-accept -email 'YOUR_HONEYGAIN_EMAIL_ADDRESS' -pass 'YOUR_USER_HONEYGAIN_PASSWORD' -device EarningMachine
+        command: -tou-accept -email 'crazyfarmer@kakao.com' -pass 'Zxcx!!8520' -device EarningMachine
         restart: always
         networks:
             default:
@@ -44,7 +44,7 @@ services:
         image: packetstream/psclient:latest
         restart: always
         environment:
-            - CID=YOUR_PACKETSTREAM_CID
+            - CID=6JoZ
         networks:
             default:
                 ipv4_address: 172.106.0.40
@@ -65,15 +65,15 @@ services:
 
     #Pawns Configuration
     pawns:
-        container_name: pawn        
+        container_name: pawn
         image: iproyal/pawns-cli:latest
-        command: -email='YOUR_PAWNS_EMAIL_ADDRESS' -password='YOUR_PAWNS_USER_PASSWORD' -device-name=EarningMachine -accept-tos
+        command: -email='crazyfarmer@kakao.com' -password='Zxcx!!8520' -device-name=EarningMachine -accept-tos
         restart: always
         networks:
             default:
                 ipv4_address: 172.106.0.50
     #end of Pawns Configuration
-    
+
     #Bitping Configuration
     bitping:
         container_name: bitping
@@ -87,14 +87,6 @@ services:
     #end of Bitping Configuration
 
     #TraffMonetizer Configuration
-    traffmonetizer:
-        container_name: traffmonetizer
-        image: traffmonetizer/cli:latest
-        restart: always
-        command: start accept --token YOUR_TRAFFMONETIZER_TOKEN
-        networks:
-            default:
-                ipv4_address: 172.106.0.70
     #end of TraffMonetizer Configuration
 
     #Repocket Configuration
@@ -103,8 +95,8 @@ services:
         image: repocket/repocket:latest
         restart: always
         environment:
-           - RP_EMAIL=YOUR_REPOCKET_EMAIL_ADDRESS
-           - RP_API_KEY=YOUR_REPOCKET_API_KEY
+           - RP_EMAIL='crazyfarmer@kakao.com'
+           - RP_API_KEY='81c0110d-7b25-4c7c-85e0-eb594564a6da'
         networks:
             default:
                 ipv4_address: 172.106.0.80
@@ -116,7 +108,7 @@ services:
         image: proxylite/proxyservice:latest
         restart: always
         environment:
-          - USER_ID=YOUR_PROXYLITE_ACCOUNT_ID
+          - USER_ID=511821
         networks:
             default:
                 ipv4_address: 172.106.0.90
